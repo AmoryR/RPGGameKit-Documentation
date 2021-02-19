@@ -1,0 +1,23 @@
+{
+  "name": "RPGGameKit-Documentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmoryR/RPGGameKit-Documentation.git"
+  },
+  "keywords": [],
+  "author": "Amory Rouault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmoryR/RPGGameKit-Documentation/issues"
+  },
+  "homepage": "https://github.com/AmoryR/RPGGameKit-Documentation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
