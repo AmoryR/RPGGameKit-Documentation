@@ -1,6 +1,9 @@
+<h2>Methods</h2>
 
-<div *ngFor="let methods of stringtifyMethods">
+<mat-card>
 
-    <p>{{ methods }}</p>
-    
-</div>
+    <mat-list>
+        <mat-list-item *ngFor="let methods of stringtifyMethods">{{ methods }}</mat-list-item>
+    </mat-list>
+
+</mat-card>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Entity, Method, Property } from 'src/model/class/class';
+import { Class, Method, Property } from 'src/model/class/class';
 
 @Component({
 	selector: 'app-class-template',
@@ -9,7 +9,8 @@ import { Entity, Method, Property } from 'src/model/class/class';
 })
 export class ClassTemplateComponent {
 
-    class: Entity;
+    class: Class;
+    declaration: string = "";
 
     constructor() {
 
@@ -41,7 +42,11 @@ export class ClassTemplateComponent {
 
         ];
 
-        this.class = new Entity("Entity", initializers, properties, methods);
+        this.class = new Class("Entity", initializers, properties, methods);
+        this.class.heritage.push("SKSpriteKit");
+
+        // Avoid looping through getDeclaration()
+        this.declaration = this.class.getDeclaration();
 
     }
 

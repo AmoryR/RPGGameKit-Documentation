@@ -8,6 +8,10 @@
 
 // mat-drawer {
 // }
+
+mat-toolbar {
+    position: fixed;
+}
   
 mat-drawer-content {
     display: flex;
@@ -21,6 +25,9 @@ mat-drawer-content {
 
     display: flex;
     justify-content: center;
+
+    // Use breakpoints because the toolbar height changes
+    margin-top: 79px; // 64 + 15
 
     .content-container {
 

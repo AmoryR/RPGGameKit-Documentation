@@ -63,28 +63,42 @@ export class Property {
 
 }
 
-export interface Class {
-
-    initializers: Array<Method>;
-    properties: Array<Property>;
-    methods: Array<Method>;
-
-}
-
 /* Test */
-export class Entity implements Class {
+export class Class {
 
-    name: String
+    name: string;
+    description: string = "Description ...";
+    heritage: Array<string> = [];
     initializers: Array<Method>;
     properties: Array<Property>;
     methods: Array<Method>;
 
-    constructor(name: String, initializers: Array<Method>, properties: Array<Property>, methods: Array<Method>) {
+    constructor(name: string, initializers: Array<Method>, properties: Array<Property>, methods: Array<Method>) {
         this.name = name;
         this.initializers = initializers;
         this.properties = properties;
         this.methods = methods;
     }
 
+    getDeclaration() : string {
+        var str = `class ${this.name}`;
 
+        if (this.heritage.length != 0) {
+
+            str += " : ";
+
+            this.heritage.forEach((heri, index) => {
+
+                str += heri;
+
+                if (index != this.heritage.length - 1) {
+                    str += ", ";
+                }
+
+            })
+
+        }
+
+        return str;
+    }
 }
