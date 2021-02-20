@@ -2,8 +2,16 @@
 
 <mat-card>
 
-    <mat-list>
-        <mat-list-item *ngFor="let methods of stringtifyMethods">{{ methods }}</mat-list-item>
-    </mat-list>
+    <div *ngFor="let key of keys">
+
+        <h3>{{key}}</h3>
+
+        <mat-list>
+    
+            <mat-list-item *ngFor="let method of stringtifyCategories[key]">{{ method }}</mat-list-item>
+    
+        </mat-list>
+    </div>
+
 
 </mat-card>

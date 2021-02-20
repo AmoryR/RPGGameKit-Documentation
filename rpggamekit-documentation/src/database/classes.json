@@ -6,11 +6,28 @@
             "superclasses": [],
             "initializers": [
                 {
-                    "name": "",
+                    "name": "init",
                     "properties": [
                         {
-                            "name": "",
-                            "type": "",
+                            "name": "color",
+                            "type": "UIColor",
+                            "default": "",
+                            "label": ""
+                        },
+                        {
+                            "name": "size",
+                            "type": "CGSize",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "init",
+                    "properties": [
+                        {
+                            "name": "textureName",
+                            "type": "String",
                             "default": "",
                             "label": ""
                         }
@@ -19,23 +36,109 @@
             ],
             "properties": [
                 {
-                    "name": "",
-                    "type": "",
-                    "default": "",
+                    "name": "movementSpeed",
+                    "type": "CGFloat",
+                    "default": "40.0",
                     "label": ""
                 }
             ],
             "methods": [
                 {
-                    "name": "",
+                    "name": "add",
                     "properties": [
                         {
-                            "name": "",
-                            "type": "",
+                            "name": "scene",
+                            "type": "RPGGameScene",
+                            "default": "",
+                            "label": "to"
+                        }
+                    ],
+                    "category": "Add or remove entity to or from a RPGGameScene"
+                },
+                {
+                    "name": "remove",
+                    "properties": [],
+                    "category": "Add or remove entity to or from a RPGGameScene"
+                },
+                {
+                    "name": "attach",
+                    "properties": [
+                        {
+                            "name": "camera",
+                            "type": "RPGCamera",
                             "default": "",
                             "label": ""
                         }
-                    ]
+                    ],
+                    "category": "Camera"
+                },
+                {
+                    "name": "buildPhysics",
+                    "properties": [],
+                    "category": "Physics"
+                },
+                {
+                    "name": "move",
+                    "properties": [
+                        {
+                            "name": "direction",
+                            "type": "CGVector",
+                            "default": "",
+                            "label": "in"
+                        }
+                    ],
+                    "category": "Movement"
+                },
+                {
+                    "name": "stopMoving",
+                    "properties": [],
+                    "category": "Movement"
+                },
+                {
+                    "name": "register",
+                    "properties": [
+                        {
+                            "name": "animation",
+                            "type": "RPGAnimation",
+                            "default": "",
+                            "label": ""
+                        }
+                    ],
+                    "category": "Animation"
+                },
+                {
+                    "name": "playAnimation",
+                    "properties": [
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ],
+                    "category": "Animation"
+                },
+                {
+                    "name": "stopAnimation",
+                    "properties": [
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ],
+                    "category": "Animation"
+                },
+                {
+                    "name": "updateVelocity",
+                    "properties": [],
+                    "category": "Update"
+                },
+                {
+                    "name": "update",
+                    "properties": [],
+                    "category": "Update"
                 }
             ]
         }

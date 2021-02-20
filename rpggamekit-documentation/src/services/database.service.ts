@@ -20,4 +20,13 @@ export class DatabaseService {
 
     }
 
+    /// Find a way to get a class or undefined 
+    getClassesWithName(name: string) : Array<Class> {
+
+        return this.classes.filter((value) => {
+            return value.name == name;
+        });
+        
+    }
+
 }

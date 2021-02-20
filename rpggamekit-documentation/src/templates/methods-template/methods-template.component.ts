@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Method } from 'src/model/class/class';
+import { Class, Method } from 'src/model/class/class';
 
 @Component({
 	selector: 'app-methods-template',
@@ -9,17 +9,25 @@ import { Method } from 'src/model/class/class';
 })
 export class MethodsTemplateComponent implements OnInit {
 
-	@Input() methods: Array<Method> = new Array<Method>();
+	@Input() class: Class = new Class();
 
-    stringtifyMethods: Array<string> = new Array<string>();
+	keys: Array<string> = new Array<string>();
+	stringtifyCategories: { [id: string]: Array<string> } = {};
 
 	ngOnInit() {
-        
-        this.methods.forEach((method) => {
 
-            this.stringtifyMethods.push(method.toString());
+		let categories = this.class.getMethodsByCategory();
+		this.keys = Object.keys(categories);
 
-        });
+		this.keys.forEach(key => {
+
+			if (this.stringtifyCategories[key] == undefined) {
+				this.stringtifyCategories[key] = new Array<string>();
+			}
+			categories[key].forEach(method => {
+				this.stringtifyCategories[key].push(method.toString());
+			});
+		});
 
     }
 

@@ -18,8 +18,9 @@ export class ClassTemplateComponent {
         private databaseService: DatabaseService
     ) {
 
-        if (this.databaseService.classes.length != 0) {
-            this.class = this.databaseService.classes[0];
+        let classes = this.databaseService.getClassesWithName("Entity");
+        if (classes.length != 0) { 
+            this.class = classes[0];
         }
 
     }

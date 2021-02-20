@@ -3,16 +3,16 @@ import { JsonObject, JsonProperty } from "json2typescript";
 @JsonObject("Property")
 export class Property {
 
-    @JsonProperty("name", String)
+    @JsonProperty("name", String, true)
     name: string = "";
 
-    @JsonProperty("type", String)
+    @JsonProperty("type", String, true)
     type: string = "";
 
-    @JsonProperty("default", String)
+    @JsonProperty("default", String, true)
     default: string = "";
 
-    @JsonProperty("label", String)
+    @JsonProperty("label", String, true)
     label: string = "";
     
     constructor() {}
@@ -33,11 +33,14 @@ export class Property {
 @JsonObject("Method")
 export class Method {
 
-    @JsonProperty("name", String)
+    @JsonProperty("name", String, true)
     name: string = "";
 
-    @JsonProperty("properties", [Property])
+    @JsonProperty("properties", [Property], true)
     properties: Array<Property> = [];
+
+    @JsonProperty("category", String, true)
+    category: string = "";
 
     constructor() {}
 
@@ -77,16 +80,16 @@ export class Class {
     @JsonProperty("description", String, true)
     description: string = "";
 
-    // @JsonProperty("superclasses", [String])
+    @JsonProperty("superclasses", [String], true)
     superclasses: Array<string> = [];
 
-    // @JsonProperty("initializers", [Method])
+    @JsonProperty("initializers", [Method], true)
     initializers: Array<Method> = [];
 
-    // @JsonProperty("properties", [Property])
+    @JsonProperty("properties", [Property], true)
     properties: Array<Property> = [];
 
-    // @JsonProperty("methods", [Method])
+    @JsonProperty("methods", [Method], true)
     methods: Array<Method> = [];
 
     constructor() {}
@@ -111,5 +114,21 @@ export class Class {
         }
 
         return str;
+    }
+
+    getMethodsByCategory() : { [id: string]: Array<Method> } {
+
+        let orderedMethods: { [id: string]: Array<Method> } = {};
+
+        this.methods.forEach(method => {
+
+            if (!(method.category in orderedMethods)) {
+                orderedMethods[method.category] = new Array<Method>();
+            } 
+            orderedMethods[method.category].push(method);
+
+        });
+
+        return orderedMethods;
     }
 }
