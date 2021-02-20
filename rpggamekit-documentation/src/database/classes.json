@@ -1,0 +1,43 @@
+{
+    "classes": [
+        {
+            "name": "Entity",
+            "description": "Description ...",
+            "superclasses": [],
+            "initializers": [
+                {
+                    "name": "",
+                    "properties": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                }
+            ],
+            "properties": [
+                {
+                    "name": "",
+                    "type": "",
+                    "default": "",
+                    "label": ""
+                }
+            ],
+            "methods": [
+                {
+                    "name": "",
+                    "properties": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

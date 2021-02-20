@@ -1,13 +1,45 @@
+import { JsonObject, JsonProperty } from "json2typescript";
 
+@JsonObject("Property")
+export class Property {
+
+    @JsonProperty("name", String)
+    name: string = "";
+
+    @JsonProperty("type", String)
+    type: string = "";
+
+    @JsonProperty("default", String)
+    default: string = "";
+
+    @JsonProperty("label", String)
+    label: string = "";
+    
+    constructor() {}
+
+    toString(): string {
+
+        var str = `${this.name}: ${this.type}`;
+
+        if (this.default.length != 0) {
+            str += ` = ${this.default}`;
+        }
+
+        return str;
+    }
+
+}
+
+@JsonObject("Method")
 export class Method {
 
-    name: string;
-    properties: Array<Property>;
+    @JsonProperty("name", String)
+    name: string = "";
 
-    constructor(name: string = "", properties: Array<Property> = []) {
-        this.name = name;
-        this.properties = properties;
-    }
+    @JsonProperty("properties", [Property])
+    properties: Array<Property> = [];
+
+    constructor() {}
 
     toString(): string {
 
@@ -34,64 +66,43 @@ export class Method {
 
 }
 
-export class Property {
 
-    name: string = "";
-    type: string = "";
-    defaultValue: string = "";
-    isConst: boolean = false;
-    label: string = "";
-    
-    constructor(name: string, type: string, defaultValue: string, isConst: boolean, label: string = "") {
-        this.name = name;
-        this.type = type;
-        this.defaultValue = defaultValue;
-        this.isConst = isConst;
-        this.label = label;
-    }
 
-    toString(): string {
-
-        var str = `${this.name}: ${this.type}`;
-
-        if (this.defaultValue.length != 0) {
-            str += ` = ${this.defaultValue}`;
-        }
-
-        return str;
-    }
-
-}
-
-/* Test */
+@JsonObject("Class")
 export class Class {
 
-    name: string;
-    description: string = "Description ...";
-    heritage: Array<string> = [];
-    initializers: Array<Method>;
-    properties: Array<Property>;
-    methods: Array<Method>;
+    @JsonProperty("name", String, true)
+    name: String = "";
+    
+    @JsonProperty("description", String, true)
+    description: string = "";
 
-    constructor(name: string, initializers: Array<Method>, properties: Array<Property>, methods: Array<Method>) {
-        this.name = name;
-        this.initializers = initializers;
-        this.properties = properties;
-        this.methods = methods;
-    }
+    // @JsonProperty("superclasses", [String])
+    superclasses: Array<string> = [];
+
+    // @JsonProperty("initializers", [Method])
+    initializers: Array<Method> = [];
+
+    // @JsonProperty("properties", [Property])
+    properties: Array<Property> = [];
+
+    // @JsonProperty("methods", [Method])
+    methods: Array<Method> = [];
+
+    constructor() {}
 
     getDeclaration() : string {
-        var str = `class ${this.name}`;
+        var str = ""//`class ${this.name}`;
 
-        if (this.heritage.length != 0) {
+        if (this.superclasses.length != 0) {
 
             str += " : ";
 
-            this.heritage.forEach((heri, index) => {
+            this.superclasses.forEach((heri, index) => {
 
                 str += heri;
 
-                if (index != this.heritage.length - 1) {
+                if (index != this.superclasses.length - 1) {
                     str += ", ";
                 }
 
