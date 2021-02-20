@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
 	selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	
+
+	// Drawer setting
+	mode: MatDrawerMode = "side";
+	opened: boolean = false;
+
 }

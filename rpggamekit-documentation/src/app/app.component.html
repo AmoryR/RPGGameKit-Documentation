@@ -1,11 +1,38 @@
 <mat-drawer-container class="app-container" >
 
-	<mat-drawer #drawer mode="side">
-		I'm a drawer
+	<!-- DRAWER -->
+	<mat-drawer #drawer [mode]="mode" [opened]="opened">
+		
+		<p>I'm a drawer</p>
+
+		<button mat-raised-button (click)="drawer.toggle()">Close</button>
+
+		
 	</mat-drawer>
-	
+
+	<!-- DRAWER CONTENT -->
 	<mat-drawer-content>
-		<button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+
+		<!-- TOOLBAR -->
+		<mat-toolbar color="primary">
+			<button mat-icon-button class="icon" aria-label="Icon-button with menu icon" (click)="drawer.toggle()">
+			  	<mat-icon>menu</mat-icon>
+			</button>
+			<span>Documentation</span>
+		</mat-toolbar>
+
+		<!-- PAGE CONTENT -->
+		<div class="page-content">
+
+			<div class="content-container">
+				
+				<!-- This should be a routing component -->
+				<!-- For now I'm just going to create a class that will move to a component-->
+
+			</div>
+			
+		</div>
+
 	</mat-drawer-content>
 
 </mat-drawer-container>

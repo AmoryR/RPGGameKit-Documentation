@@ -1,0 +1,25 @@
+/*
+    Responsive breakpoints
+
+    - Source: https://levelup.gitconnected.com/handle-media-breakpoints-in-angular-and-sass-b8cef4137747
+    - Material reference: https://material.io/design/layout/responsive-layout-grid.html#breakpoints
+*/
+
+$breakpoints: (
+    'phone': 599px,
+    'tablet-portrait': 600px,
+    'tablet-landscape': 960px,
+    'desktop': 1280px,
+    'big-desktop': 1920px
+) !default;
+
+@mixin screen($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+        @media (max-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, `#{$breakpoint}` can be found.";
+    }
+}

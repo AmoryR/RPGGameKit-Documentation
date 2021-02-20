@@ -1,12 +1,33 @@
+@import 'responsive.mixin.scss';
+
 .app-container {
     width: 100%;
     height: 100%;
     margin: 0;
 }
+
+// mat-drawer {
+// }
   
-  mat-drawer-content {
-    padding: 12px;
+mat-drawer-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
+}
+
+
+
+.page-content {
+    flex: 1 1 auto;
+
+    display: flex;
+    justify-content: center;
+
+    .content-container {
+
+        width: 75%;
+
+        // Use media breakpoints via responsive.mixin.scss to change width
+
+    }
+
+}
