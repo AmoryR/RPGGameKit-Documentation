@@ -1,0 +1,25 @@
+<p>Class</p>
+<h1>{{ class.name }}</h1>
+<h2 style="color: gray;">Class information here (heritage, singleton,...)</h2>
+
+<mat-divider></mat-divider>
+
+<h3>Declaration</h3>
+<p>Declaration code here</p>
+
+<h5>Constructor</h5>
+<mat-divider></mat-divider>
+
+<app-initializers-template [initializers]="class.initializers"></app-initializers-template>
+
+<h5>Properties</h5>
+<mat-divider></mat-divider>
+<app-properties-template [properties]="class.properties"></app-properties-template>
+
+
+<h5>Methods</h5>
+<mat-divider></mat-divider>
+
+<app-methods-template [methods]="class.methods"></app-methods-template>
+
+<p>*Organize by category</p>
