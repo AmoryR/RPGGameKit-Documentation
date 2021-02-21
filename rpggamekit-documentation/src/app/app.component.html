@@ -3,11 +3,26 @@
 	<!-- DRAWER -->
 	<mat-drawer #drawer [mode]="mode" [opened]="opened">
 		
-		<p>I'm a drawer</p>
+		<div class="drawer-header">
 
-		<button mat-raised-button (click)="drawer.toggle()">Close</button>
+			<div class="drawer-header-text">
+				<h1>RPGGameKit</h1>
+				<h3>Build RPG for iOS.</h3>
+			</div>
 
-		
+			<button mat-icon-button (click)="drawer.toggle()">
+				<mat-icon>keyboard_backspace</mat-icon>
+			</button>
+
+		</div>
+
+		<mat-nav-list>
+
+			<mat-list-item (click)="show('class')">Classes</mat-list-item>
+			<mat-list-item>Examples</mat-list-item>
+
+		</mat-nav-list>
+
 	</mat-drawer>
 
 	<!-- DRAWER CONTENT -->
@@ -26,9 +41,6 @@
 
 			<div class="content-container">
 				
-				<!-- This should be a routing component -->
-				<!-- <app-class-template></app-class-template> -->
-				<!-- <app-classes-list></app-classes-list> -->
 				<router-outlet></router-outlet>
 
 			</div>

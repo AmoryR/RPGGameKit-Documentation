@@ -1,7 +1,7 @@
 {
     "classes": [
         {
-            "name": "Entity",
+            "name": "RPGEntity",
             "description": "Description ...",
             "superclasses": [],
             "initializers": [
@@ -141,6 +141,27 @@
                     "category": "Update"
                 }
             ]
+        },
+        {
+            "name": "RPGGameScene"
+        },
+        {
+            "name": "RPGAnimation"
+        },
+        {
+            "name": "RPGAudioService"
+        },
+        {
+            "name": "RPGCamera"
+        },
+        {
+            "name": "RPGCollisionHandler"
+        },
+        {
+            "name": "RPGPortal"
+        },
+        {
+            "name": "RPGGestureDetector"
         }
     ]
 }

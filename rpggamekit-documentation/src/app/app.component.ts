@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
@@ -9,7 +11,16 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 export class AppComponent {
 
 	// Drawer setting
+	// Should change drawer mode on some screen size
 	mode: MatDrawerMode = "side";
-	opened: boolean = false;
+	opened: boolean = true;
+
+	constructor(
+		private router: Router
+	) {}
+
+	show(page: string) {
+		this.router.navigate([page]);
+	}
 
 }
