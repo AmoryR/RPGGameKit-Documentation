@@ -1,5 +1,6 @@
 import { JsonObject, JsonProperty } from "json2typescript";
 
+// Should be call variable
 @JsonObject("Property")
 export class Property {
 
@@ -36,6 +37,7 @@ export class Method {
     @JsonProperty("name", String, true)
     name: string = "";
 
+    // Should be call parameters
     @JsonProperty("properties", [Property], true)
     properties: Array<Property> = [];
 

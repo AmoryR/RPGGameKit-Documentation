@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Do I really need to import these ?
 import { ClassTemplateModule } from 'src/templates/class-template/class-template.module';
+import { MethodsTemplateModule } from 'src/templates/methods-template/methods-template.module';
 import { ClassesListModule } from './classes-list/classes-list.module';
 import { ExamplesListModule } from './examples-list/examples-list.module';
 
@@ -27,6 +28,7 @@ import { MatListModule } from '@angular/material/list';
 		BrowserAnimationsModule,
 
 		ClassTemplateModule,
+		MethodsTemplateModule,
 		ClassesListModule,
 		ExamplesListModule,
 

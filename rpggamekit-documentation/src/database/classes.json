@@ -390,56 +390,11 @@
         },
         {
             "name": "RPGPortal",
-            "description": "Singleton",
+            "description": "",
             "superclasses": [],
-            "initializers": [
-                {
-                    "name": "init",
-                    "properties": []
-                }
-            ],
-            "properties": [
-                {
-                    "name": "static shared",
-                    "type": "RPGGestureDetector",
-                    "default": "RPGGestureDetector()",
-                    "label": ""
-                },
-                {
-                    "name": "static defaultGestureDetector",
-                    "type": "RPGGestureDetector?",
-                    "default": "",
-                    "label": ""
-                }
-            ],
-            "methods": [
-                {
-                    "name": "static set",
-                    "properties": [
-                        {
-                            "name": "instance",
-                            "type": "RPGGestureDetector",
-                            "default": "",
-                            "label": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "static set",
-                    "properties": [
-                        {
-                            "name": "defaultGestureDetector",
-                            "type": "RPGGestureDetector",
-                            "default": "",
-                            "label": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "static setDefault",
-                    "properties": []
-                }
-            ]
+            "initializers": [],
+            "properties": [],
+            "methods": []
         },
         {
             "name": "RPGGestureDetector"

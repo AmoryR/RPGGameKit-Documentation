@@ -13,7 +13,7 @@ export class AppComponent {
 	// Drawer setting
 	// Should change drawer mode on some screen size
 	mode: MatDrawerMode = "side";
-	opened: boolean = true;
+	opened: boolean = false;
 
 	constructor(
 		private router: Router
