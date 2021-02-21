@@ -95,7 +95,7 @@ export class Class {
     constructor() {}
 
     getDeclaration() : string {
-        var str = ""//`class ${this.name}`;
+        var str = `class ${this.name}`;
 
         if (this.superclasses.length != 0) {
 

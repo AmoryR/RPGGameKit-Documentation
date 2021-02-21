@@ -3,7 +3,9 @@
         {
             "name": "RPGEntity",
             "description": "Description ...",
-            "superclasses": [],
+            "superclasses": [
+                "SKSpriteNode"
+            ],
             "initializers": [
                 {
                     "name": "init",
@@ -143,22 +145,301 @@
             ]
         },
         {
-            "name": "RPGGameScene"
+            "name": "RPGGameScene",
+            "description": "Description ...",
+            "superclasses": [
+                "SKScene",
+                "SKPhysicsContactDelegate"
+            ],
+            "initializers": [],
+            "properties": [],
+            "methods": [
+                {
+                    "name": "register",
+                    "properties": [
+                        {
+                            "name": "collisionHandler",
+                            "type": "RPGCollisionHandler",
+                            "default": "",
+                            "label": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ],
+                    "category": "Collision"
+                },
+                {
+                    "name": "removeCollisionHandler",
+                    "properties": [
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ],
+                    "category": "Collision"
+                },
+                {
+                    "name": "playBackgroundAudio",
+                    "properties": [
+                        {
+                            "name": "name",
+                            "type": "String",
+                            "default": "",
+                            "label": "fileName"
+                        }
+                    ],
+                    "category": "Audio"
+                },
+                {
+                    "name": "setCurrentBackgroundAudioVolume",
+                    "properties": [
+                        {
+                            "name": "volume",
+                            "type": "Float",
+                            "default": "",
+                            "label": "to"
+                        }
+                    ],
+                    "category": "Audio"
+                },
+                {
+                    "name": "playCurrentBackgroundAudio",
+                    "properties": [],
+                    "category": "Audio"
+                },
+                {
+                    "name": "stopCurrentBackgroundAudio",
+                    "properties": [],
+                    "category": "Audio"
+                },
+                {
+                    "name": "removeBackgroundAudio",
+                    "properties": [],
+                    "category": "Audio"
+                }
+            ]
         },
         {
-            "name": "RPGAnimation"
+            "name": "RPGAnimation",
+            "description": "Description ...",
+            "superclasses": [],
+            "initializers": [
+                {
+                    "name": "init",
+                    "properties": [
+                        {
+                            "name": "action",
+                            "type": "SKAction",
+                            "default": "",
+                            "label": ""
+                        },
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ]
+                }
+            ],
+            "properties": [
+                {
+                    "name": "key",
+                    "type": "String",
+                    "default": "",
+                    "label": ""
+                },
+                {
+                    "name": "entity",
+                    "type": "RPGEntity?",
+                    "default": "",
+                    "label": ""
+                },
+                {
+                    "name": "action",
+                    "type": "SKAction",
+                    "default": "",
+                    "label": ""
+                },
+                {
+                    "name": "animationRepeat",
+                    "type": "RPGAnimationRepeat",
+                    "default": ".once",
+                    "label": ""
+                }
+            ],
+            "methods": [
+                {
+                    "name": "set",
+                    "properties": [
+                        {
+                            "name": "entity",
+                            "type": "RPGEntity",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "run",
+                    "properties": []
+                },
+                {
+                    "name": "stop",
+                    "properties": []
+                },
+                {
+                    "name": "setRepeatForever",
+                    "properties": []
+                },
+                {
+                    "name": "setRepeatOnce",
+                    "properties": []
+                }
+            ]
         },
         {
-            "name": "RPGAudioService"
+            "name": "RPGAudioService",
+            "description": "Singleton",
+            "superclasses": [],
+            "initializers": [],
+            "properties": [
+                {
+                    "name": "static shared",
+                    "type": "RPGAudioService",
+                    "default": "RPGAudioService()",
+                    "label": ""
+                }
+            ],
+            "methods": [
+                {
+                    "name": "register",
+                    "properties": [
+                        {
+                            "name": "name",
+                            "type": "String",
+                            "default": "",
+                            "label": "audioName"
+                        },
+                        {
+                            "name": "type",
+                            "type": "String",
+                            "default": "",
+                            "label": "ofType"
+                        },
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ]
+                },
+                {
+                    "name": "removeAudio",
+                    "properties": [
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ]
+                },
+                {
+                    "name": "playAudio",
+                    "properties": [
+                        {
+                            "name": "key",
+                            "type": "String",
+                            "default": "",
+                            "label": "withKey"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "name": "RPGCamera"
+            "name": "RPGCamera",
+            "description": "Description ...",
+            "superclasses": [
+                "SKCameraNode"
+            ],
+            "initializers": [
+                {
+                    "name": "init",
+                    "properties": [
+                        {
+                            "name": "scene",
+                            "type": "RPGGameSCene",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "RPGCollisionHandler"
         },
         {
-            "name": "RPGPortal"
+            "name": "RPGPortal",
+            "description": "Singleton",
+            "superclasses": [],
+            "initializers": [
+                {
+                    "name": "init",
+                    "properties": []
+                }
+            ],
+            "properties": [
+                {
+                    "name": "static shared",
+                    "type": "RPGGestureDetector",
+                    "default": "RPGGestureDetector()",
+                    "label": ""
+                },
+                {
+                    "name": "static defaultGestureDetector",
+                    "type": "RPGGestureDetector?",
+                    "default": "",
+                    "label": ""
+                }
+            ],
+            "methods": [
+                {
+                    "name": "static set",
+                    "properties": [
+                        {
+                            "name": "instance",
+                            "type": "RPGGestureDetector",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "static set",
+                    "properties": [
+                        {
+                            "name": "defaultGestureDetector",
+                            "type": "RPGGestureDetector",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "static setDefault",
+                    "properties": []
+                }
+            ]
         },
         {
             "name": "RPGGestureDetector"

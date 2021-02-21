@@ -25,6 +25,7 @@ export class ClassTemplateComponent {
         let classes = this.databaseService.getClassesWithName(className);
         if (classes.length != 0) { 
             this.class = classes[0];
+            this.declaration = this.class.getDeclaration();
         } else {
             // Find a war to feedback that to class found for name className
             console.log("No class found");

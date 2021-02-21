@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ClassesListComponent } from 'src/app/classes-list/classes-list.component';
 import { ClassTemplateComponent } from 'src/templates/class-template/class-template.component';
+import { ClassesListComponent } from 'src/app/classes-list/classes-list.component';
+import { ExamplesListComponent } from 'src/app/examples-list/examples-list.component';
 
 const routes: Routes = [
 	{
 		path: 'class/:name',
 		component: ClassTemplateComponent
+	},
+	{
+		path: 'classes',
+		component: ClassesListComponent
+	},
+	{
+		path: 'examples',
+		component: ExamplesListComponent
 	},
 	{
 		path: '',
