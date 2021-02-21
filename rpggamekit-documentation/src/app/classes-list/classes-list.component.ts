@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Class } from 'src/model/class/class';
 import { DatabaseService } from 'src/services/database.service';
 
@@ -12,7 +13,8 @@ export class ClassesListComponent implements OnInit {
     classes: Array<Class> = new Array<Class>();
 
     constructor(
-        private databaseService: DatabaseService
+        private databaseService: DatabaseService,
+        private router: Router
     ) {
 
     }
@@ -21,6 +23,10 @@ export class ClassesListComponent implements OnInit {
 
         this.classes = this.databaseService.classes;
 
+    }
+
+    show(className: string) {
+        this.router.navigate([`class/${className}`]);
     }
 
 }

@@ -75,7 +75,7 @@ export class Method {
 export class Class {
 
     @JsonProperty("name", String, true)
-    name: String = "";
+    name: string = "";
     
     @JsonProperty("description", String, true)
     description: string = "";

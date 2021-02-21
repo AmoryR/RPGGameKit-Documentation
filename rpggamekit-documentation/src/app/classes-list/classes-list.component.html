@@ -1,7 +1,7 @@
 
-<mat-list>
+<mat-nav-list>
 
-    <mat-list-item *ngFor="let class of classes; let index = index">
+    <mat-list-item *ngFor="let class of classes; let index = index" (click)="show(class.name)">
 
         {{ class.name }}
 
@@ -9,4 +9,4 @@
 
     </mat-list-item>
 
-</mat-list>
+</mat-nav-list>
