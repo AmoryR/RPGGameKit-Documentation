@@ -1,0 +1,12 @@
+
+<mat-list>
+
+    <mat-list-item *ngFor="let class of classes; let index = index">
+
+        {{ class.name }}
+
+        <mat-divider *ngIf="index != classes.length - 1"></mat-divider>
+
+    </mat-list-item>
+
+</mat-list>

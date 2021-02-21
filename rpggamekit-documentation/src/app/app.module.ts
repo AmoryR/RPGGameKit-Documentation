@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ClassTemplateModule } from 'src/templates/class-template/class-template.module';
+import { ClassesListModule } from './classes-list/classes-list.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 		BrowserAnimationsModule,
 
 		ClassTemplateModule,
+		ClassesListModule,
 
 		MatSidenavModule,
 		MatToolbarModule,
