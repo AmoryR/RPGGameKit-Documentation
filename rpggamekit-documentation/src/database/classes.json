@@ -2,7 +2,7 @@
     "classes": [
         {
             "name": "RPGEntity",
-            "description": "Description ...",
+            "description": "...",
             "superclasses": [
                 "SKSpriteNode"
             ],
@@ -146,7 +146,7 @@
         },
         {
             "name": "RPGGameScene",
-            "description": "Description ...",
+            "description": "...",
             "superclasses": [
                 "SKScene",
                 "SKPhysicsContactDelegate"
@@ -227,7 +227,7 @@
         },
         {
             "name": "RPGAnimation",
-            "description": "Description ...",
+            "description": "...",
             "superclasses": [],
             "initializers": [
                 {
@@ -306,7 +306,7 @@
         },
         {
             "name": "RPGAudioService",
-            "description": "Singleton",
+            "description": "...",
             "superclasses": [],
             "initializers": [],
             "properties": [
@@ -367,7 +367,7 @@
         },
         {
             "name": "RPGCamera",
-            "description": "Description ...",
+            "description": "...",
             "superclasses": [
                 "SKCameraNode"
             ],
@@ -386,7 +386,12 @@
             ]
         },
         {
-            "name": "RPGCollisionHandler"
+            "name": "RPGCollisionHandler",
+            "description": "",
+            "superclasses": [],
+            "initializers": [],
+            "properties": [],
+            "methods": []
         },
         {
             "name": "RPGPortal",
@@ -397,7 +402,12 @@
             "methods": []
         },
         {
-            "name": "RPGGestureDetector"
+            "name": "RPGGestureDetector",
+            "description": "",
+            "superclasses": [],
+            "initializers": [],
+            "properties": [],
+            "methods": []
         }
     ]
 }

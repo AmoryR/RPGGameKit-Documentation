@@ -1,3 +1,5 @@
+$radius: 8px;
+
 .title {
     font-weight: bold;
     margin: 0;
@@ -6,4 +8,41 @@
 .description {
     color: gray;
     font-size: 1.2em;
+}
+
+.declaration-container {
+
+    border: 1px solid lightgray;
+    border-radius: $radius;
+    background-color: rgb(245, 245, 245);
+
+    p {
+        margin: 0;
+    }
+}
+
+
+
+.code-development {
+
+    padding: 24px;
+
+    background-color: rgb(245, 245, 245);//#fafafa;
+
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+
+
+    .syntax-keywork {
+        color: #ad3da4;
+    }
+
+    .syntax-type {
+        color: #703daa;
+    }
+
+    .syntax-string {
+        color: #d12f1b;
+    }
+
 }

@@ -1,19 +1,23 @@
-<h2>Methods</h2>
-
-<mat-card>
-
-    <div class="category-content" *ngFor="let key of keys; let index = index">
-
-        <h3 class="category-title" *ngIf="key.length != 0">{{key}}</h3>
-
-        <mat-list>
+<div>
     
-            <mat-list-item *ngFor="let method of stringtifyCategories[key]">{{ method }}</mat-list-item>
+    <h2>Methods</h2>
     
-        </mat-list>
-
-        <mat-divider *ngIf="index != keys.length - 1"></mat-divider>
-
-    </div>
+    <mat-card>
     
-</mat-card>
+        <div class="category-content" *ngFor="let key of keys; let index = index">
+    
+            <h3 class="category-title" *ngIf="key.length != 0">{{key}}</h3>
+    
+            <mat-list>
+        
+                <mat-list-item *ngFor="let method of stringtifyCategories[key]">{{ method }}</mat-list-item>
+        
+            </mat-list>
+    
+            <!-- <mat-divider *ngIf="index != keys.length - 1"></mat-divider> -->
+    
+        </div>
+        
+    </mat-card>
+
+</div>

@@ -1,9 +1,13 @@
-<h2>Constructor</h2>
+<div class="mb-8">
 
-<mat-card>
+    <h2>Constructor</h2>
+    
+    <mat-card>
+    
+        <mat-list>
+            <mat-list-item *ngFor="let initializer of stringtifyInitializers">{{ initializer }}</mat-list-item>
+        </mat-list>
+        
+    </mat-card>
 
-    <mat-list>
-        <mat-list-item *ngFor="let initializer of stringtifyInitializers">{{ initializer }}</mat-list-item>
-    </mat-list>
-
-</mat-card>
+</div>

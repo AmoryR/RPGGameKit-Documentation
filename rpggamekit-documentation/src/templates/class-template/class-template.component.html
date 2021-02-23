@@ -12,12 +12,27 @@
  -->
 
 <h2>Declaration</h2>
-<p>{{ declaration }}</p>
+
+<div class="declaration-container p-8 mb-8">
+    <p>{{ declaration }}</p>
+</div>
+
+<div class="code-development">
+
+    <!-- <pre> -->
+
+    <code>
+
+    <span class="syntax-type">let</span> variable = <span class="syntax-type">SKScene</span>(fileNamed: <span class="syntax-string">"World"</span>)
+
+    </code>
+
+    <!-- </pre> -->
+
+</div>
 
 <app-initializers-template *ngIf="class.initializers.length != 0" [initializers]="class.initializers"></app-initializers-template>
 
 <app-properties-template *ngIf="class.properties.length != 0" [properties]="class.properties"></app-properties-template>
 
 <app-methods-template *ngIf="class.methods.length != 0" [class]="class"></app-methods-template>
-
-<p>*Organize by category</p>
