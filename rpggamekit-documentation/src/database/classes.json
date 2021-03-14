@@ -408,6 +408,87 @@
             "initializers": [],
             "properties": [],
             "methods": []
+        },
+        {
+            "name": "RPGGestureDetectorService",
+            "description": "Singleton",
+            "superclasses": [],
+            "initializers": [],
+            "properties": [],
+            "methods": [
+                {
+                    "name": "touchesBegan",
+                    "properties": [
+                        {
+                            "name": "touches",
+                            "type": "Set<UITouch>",
+                            "default": "",
+                            "label": "_"
+                        },
+                        {
+                            "name": "event",
+                            "type": "UIEvent?",
+                            "default": "",
+                            "label": "with"
+                        },
+                        {
+                            "name": "scene",
+                            "type": "RPGGameScene",
+                            "default": "",
+                            "label": "on"
+                        }
+                    ],
+                    "category": "Touches"
+                },
+                {
+                    "name": "touchesMoved",
+                    "properties": [
+                        {
+                            "name": "touches",
+                            "type": "Set<UITouch>",
+                            "default": "",
+                            "label": "_"
+                        },
+                        {
+                            "name": "event",
+                            "type": "UIEvent?",
+                            "default": "",
+                            "label": "with"
+                        },
+                        {
+                            "name": "scene",
+                            "type": "RPGGameScene",
+                            "default": "",
+                            "label": "on"
+                        }
+                    ],
+                    "category": "Touches"
+                },
+                {
+                    "name": "touchesEnded",
+                    "properties": [
+                        {
+                            "name": "touches",
+                            "type": "Set<UITouch>",
+                            "default": "",
+                            "label": "_"
+                        },
+                        {
+                            "name": "event",
+                            "type": "UIEvent?",
+                            "default": "",
+                            "label": "with"
+                        },
+                        {
+                            "name": "scene",
+                            "type": "RPGGameScene",
+                            "default": "",
+                            "label": "on"
+                        }
+                    ],
+                    "category": "Touches"
+                }
+            ]
         }
     ]
 }
