@@ -416,6 +416,7 @@
                 },
                 {
                     "name": "matchingCategoryMask",
+                    "return": "Bool",
                     "properties": [
                         {
                             "name": "contact",

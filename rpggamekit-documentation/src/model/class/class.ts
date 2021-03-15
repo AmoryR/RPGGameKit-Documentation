@@ -37,6 +37,9 @@ export class Method {
     @JsonProperty("name", String, true)
     name: string = "";
 
+    @JsonProperty("return", String, true)
+    return: string = "";
+
     // Should be call parameters
     @JsonProperty("properties", [Property], true)
     properties: Array<Property> = [];
@@ -65,6 +68,10 @@ export class Method {
         });
 
         str += ')';
+
+        if (this.return.length != 0) {
+            str += ` -> ${this.return}`;
+        }
 
         return str;
     }
