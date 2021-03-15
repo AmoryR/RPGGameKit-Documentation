@@ -391,15 +391,79 @@
             "superclasses": [],
             "initializers": [],
             "properties": [],
-            "methods": []
+            "methods": [
+                {
+                    "name": "didBegin",
+                    "properties": [
+                        {
+                            "name": "contact",
+                            "type": "SKPhysicsContact",
+                            "default": "",
+                            "label": "_"
+                        }
+                    ]
+                },
+                {
+                    "name": "didEnd",
+                    "properties": [
+                        {
+                            "name": "contact",
+                            "type": "SKPhysicsContact",
+                            "default": "",
+                            "label": "_"
+                        }
+                    ]
+                },
+                {
+                    "name": "matchingCategoryMask",
+                    "properties": [
+                        {
+                            "name": "contact",
+                            "type": "SKPhysicsContact",
+                            "default": "",
+                            "label": "with"
+                        },
+                        {
+                            "name": "catagoryBitMask1",
+                            "type": "UInt32",
+                            "default": "",
+                            "label": ""
+                        },
+                        {
+                            "name": "catagoryBitMask2",
+                            "type": "UInt32",
+                            "default": "",
+                            "label": ""
+                        }
+                    ]
+                }
+            ]
         },
         {
             "name": "RPGPortal",
             "description": "",
             "superclasses": [],
             "initializers": [],
-            "properties": [],
-            "methods": []
+            "properties": [
+                {
+                    "name": "type",
+                    "type": "RPGPortalType",
+                    "default": ".error",
+                    "label": ""
+                },
+                {
+                    "name": "sceneName",
+                    "type": "String?",
+                    "default": "",
+                    "label": ""
+                }
+            ],
+            "methods": [
+                {
+                    "name": "teleport",
+                    "properties": []
+                }
+            ]
         },
         {
             "name": "RPGGestureDetector",
