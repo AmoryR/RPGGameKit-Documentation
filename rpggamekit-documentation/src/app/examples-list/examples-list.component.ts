@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tutorial } from 'src/model/tutorial/tutorial';
 
 @Component({
 	selector: 'app-examples-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExamplesListComponent implements OnInit {
 
+    tutorial: Tutorial = new Tutorial();
+
     constructor() {}
 
     ngOnInit() {
+        this.tutorial = Tutorial.getMock();
     }
 
 }

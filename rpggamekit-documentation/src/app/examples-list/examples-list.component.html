@@ -1,5 +1,5 @@
 
-<mat-nav-list>
+<!-- <mat-nav-list>
 
     <mat-list-item>
 
@@ -7,4 +7,14 @@
 
     </mat-list-item>
 
-</mat-nav-list>
+</mat-nav-list> -->
+
+<h1>Creating the tutorial page to test, it will be a list.</h1>
+<p>---------------</p>
+
+<p>{{ tutorial.title }}</p>
+
+<div *ngFor="let step of tutorial.steps">
+    <h2>{{ step.title }}</h2>
+    <p>{{ step.code }}</p>
+</div>
