@@ -15,9 +15,7 @@ export class ClassesListComponent implements OnInit {
     constructor(
         private databaseService: DatabaseService,
         private router: Router
-    ) {
-
-    }
+    ) {}
 
     ngOnInit() {
 

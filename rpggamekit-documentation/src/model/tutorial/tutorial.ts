@@ -1,4 +1,8 @@
+import { JsonObject, JsonProperty } from "json2typescript";
 
+export class Prerequisite {
+    tutorial: Tutorial = new Tutorial();
+}
 
 export class Step {
 
@@ -10,9 +14,16 @@ export class Step {
 
 }
 
+@JsonObject("Tutorial")
 export class Tutorial {
+    
+    @JsonProperty("id", Number, true)
+    id: number = -1;
 
+    @JsonProperty("title", String, true)
     title: string = "";
+
+    prerequisites: Array<Prerequisite> = new Array<Prerequisite>();
     steps: Array<Step> = new Array<Step>();
 
     constructor() {}

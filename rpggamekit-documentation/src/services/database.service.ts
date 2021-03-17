@@ -33,4 +33,12 @@ export class DatabaseService {
         
     }
 
+    getTutorialWithId(id: number) : Array<Tutorial> {
+
+        return this.tutorials.filter((value) => {
+            return value.id == id;
+        });
+
+    }
+
 }

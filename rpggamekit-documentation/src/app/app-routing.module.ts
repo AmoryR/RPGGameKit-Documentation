@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ClassTemplateComponent } from 'src/templates/class-template/class-template.component';
+import { ClassTemplateComponent } from 'src/templates/class/class-template/class-template.component';
 import { ClassesListComponent } from 'src/app/classes-list/classes-list.component';
 import { ExamplesListComponent } from 'src/app/examples-list/examples-list.component';
+import { TutorialTemplateComponent } from 'src/templates/tutorial/tutorial-template/tutorial-template.component';
 
 const routes: Routes = [
 	{
@@ -13,6 +14,10 @@ const routes: Routes = [
 	{
 		path: 'classes',
 		component: ClassesListComponent
+	},
+	{
+		path: 'tutorial/:id',
+		component: TutorialTemplateComponent
 	},
 	{
 		path: 'examples',
