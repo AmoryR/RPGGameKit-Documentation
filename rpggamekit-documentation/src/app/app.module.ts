@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClassTemplateModule } from 'src/templates/class/class-template/class-template.module';
 import { MethodsTemplateModule } from 'src/templates/class/methods-template/methods-template.module';
 import { ClassesListModule } from './classes-list/classes-list.module';
-import { ExamplesListModule } from './examples-list/examples-list.module';
+import { TutorialsListModule } from './tutorials-list/tutorials-list.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -30,7 +30,7 @@ import { MatListModule } from '@angular/material/list';
 		ClassTemplateModule,
 		MethodsTemplateModule,
 		ClassesListModule,
-		ExamplesListModule,
+		TutorialsListModule,
 
 		MatSidenavModule,
 		MatToolbarModule,

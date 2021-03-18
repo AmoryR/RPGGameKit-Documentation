@@ -5,11 +5,11 @@ import { DatabaseService } from 'src/services/database.service';
 import { Tutorial } from 'src/model/tutorial/tutorial';
 
 @Component({
-	selector: 'app-examples-list',
-	templateUrl: './examples-list.component.html',
-	styleUrls: ['./examples-list.component.scss']
+	selector: 'app-tutorials-list',
+	templateUrl: './tutorials-list.component.html',
+	styleUrls: ['./tutorials-list.component.scss']
 })
-export class ExamplesListComponent implements OnInit {
+export class TutorialsListComponent implements OnInit {
 
     //tutorial: Tutorial = new Tutorial();
     tutorials: Array<Tutorial> = new Array<Tutorial>();

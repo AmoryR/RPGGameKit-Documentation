@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { ExamplesListComponent } from './examples-list.component';
+import { TutorialsListComponent } from './tutorials-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatListModule } from '@angular/material/list';
@@ -10,7 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
 	declarations: [
-		ExamplesListComponent
+		TutorialsListComponent
 	],
 	imports: [
 		BrowserModule,
@@ -20,9 +20,9 @@ import { MatDividerModule } from '@angular/material/divider';
         MatDividerModule
 	],
     exports: [
-        ExamplesListComponent
+        TutorialsListComponent
     ],
 	providers: [],
 	bootstrap: []
 })
-export class ExamplesListModule { }
+export class TutorialsListModule { }

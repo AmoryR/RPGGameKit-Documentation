@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ClassTemplateComponent } from 'src/templates/class/class-template/class-template.component';
 import { ClassesListComponent } from 'src/app/classes-list/classes-list.component';
-import { ExamplesListComponent } from 'src/app/examples-list/examples-list.component';
+import { TutorialsListComponent } from 'src/app/tutorials-list/tutorials-list.component';
 import { TutorialTemplateComponent } from 'src/templates/tutorial/tutorial-template/tutorial-template.component';
 
 const routes: Routes = [
@@ -20,8 +20,8 @@ const routes: Routes = [
 		component: TutorialTemplateComponent
 	},
 	{
-		path: 'examples',
-		component: ExamplesListComponent
+		path: 'tutorials',
+		component: TutorialsListComponent
 	},
 	{
 		path: '',
