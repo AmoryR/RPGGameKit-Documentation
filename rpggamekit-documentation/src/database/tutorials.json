@@ -2,7 +2,21 @@
     "tutorials": [
         {
             "id": 0,
-            "title": "Create an entity"
+            "title": "Create the main character",
+            "steps": [
+                {
+                    "title": "Create an entity",
+                    "code": "self.mainCharacter = RPGEntity(textureName: \"Character\")"
+                },
+                {
+                    "title": "Build physics",
+                    "code": "self.mainCharacter.buildPhysics()"
+                },
+                {
+                    "title": "Add to scene",
+                    "code": "self.mainCharacter.add(to: self)"
+                }
+            ]
         }
     ]
 }

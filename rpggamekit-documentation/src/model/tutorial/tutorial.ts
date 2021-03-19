@@ -4,10 +4,15 @@ export class Prerequisite {
     tutorial: Tutorial = new Tutorial();
 }
 
+@JsonObject("Step")
 export class Step {
 
+    @JsonProperty("title", String, true)
     title: string = "";
+
     description: string = "";
+
+    @JsonProperty("code", String, true)
     code: string = "";
 
     constructor() {}
@@ -24,6 +29,8 @@ export class Tutorial {
     title: string = "";
 
     prerequisites: Array<Prerequisite> = new Array<Prerequisite>();
+
+    @JsonProperty("steps", Step, true)
     steps: Array<Step> = new Array<Step>();
 
     constructor() {}
